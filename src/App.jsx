@@ -206,7 +206,7 @@ function App() {
           playsInline
           onLoadedData={() => setIsVideoLoaded(true)}
         >
-         <source src="/backupSite/assets/houdiniFlip.mp4" type="video/mp4" />
+         <source src="/backupSite/videos/houdiniFlip.mp4" type="video/mp4" />
         </video>
         <div className="relative h-full w-full px-8 z-20">
           <div className="h-full flex flex-col justify-center">
