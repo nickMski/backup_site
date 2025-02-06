@@ -19,7 +19,7 @@ const projects = [
       "• Developed mathematical algorithms to generate complex fractal imagery using OpenGL shading techniques\n\n" +
       "• Translated advanced mathematical concepts into precise computational graphics rendering\n\n" +
       "• Utilized shader programming to create sophisticated mathematical visualization techniques",
-    videoUrl: "./assets/mandelbrot.mp4", // Update this path after moving video to your project
+    videoUrl: "/backupSite/assets/mandelbrot.mp4",
     codeUrl: "https://github.com/ChaseMcClellan/MandlebrotDemo.git",
     tags: ["C++", "OpenGL", "Shaders"]
   },
@@ -206,7 +206,7 @@ function App() {
           playsInline
           onLoadedData={() => setIsVideoLoaded(true)}
         >
-          <source src="./assets/houdiniFlip.mp4" type="video/mp4" />
+         <source src="/backupSite/assets/houdiniFlip.mp4" type="video/mp4" />
         </video>
         <div className="relative h-full w-full px-8 z-20">
           <div className="h-full flex flex-col justify-center">
