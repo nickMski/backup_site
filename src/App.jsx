@@ -19,7 +19,7 @@ const projects = [
       "• Developed mathematical algorithms to generate complex fractal imagery using OpenGL shading techniques\n\n" +
       "• Translated advanced mathematical concepts into precise computational graphics rendering\n\n" +
       "• Utilized shader programming to create sophisticated mathematical visualization techniques",
-    videoUrl: "/videos/mandelbrot.mp4",
+    videoUrl: "/backupSite/videos/mandelbrot.mp4",
     codeUrl: "https://github.com/ChaseMcClellan/MandlebrotDemo.git",
     tags: ["C++", "OpenGL", "Shaders"]
   },
@@ -221,7 +221,7 @@ function App() {
               setHeroVideoError(true);
             }}
           >
-            <source src="/videos/houdiniFlip.mp4" type="video/mp4" />
+            <source src="/backupSite/videos/houdiniFlip.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         ) : (
