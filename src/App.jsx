@@ -19,7 +19,7 @@ const projects = [
       "• Developed mathematical algorithms to generate complex fractal imagery using OpenGL shading techniques\n\n" +
       "• Translated advanced mathematical concepts into precise computational graphics rendering\n\n" +
       "• Utilized shader programming to create sophisticated mathematical visualization techniques",
-    videoUrl: "/backupSite/assets/mandelbrot.mp4",
+    videoUrl: "/videos/mandelbrot.mp4",
     codeUrl: "https://github.com/ChaseMcClellan/MandlebrotDemo.git",
     tags: ["C++", "OpenGL", "Shaders"]
   },
@@ -58,8 +58,9 @@ const projects = [
   }
 ];
 
-// ProjectCard component remains the same
 function ProjectCard({ project, isDark }) {
+  const [videoError, setVideoError] = useState(false);
+
   return (
     <div className="col-span-1">
       <div className={`${isDark ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} rounded-xl shadow-lg overflow-hidden transition-transform hover:-translate-y-1 duration-300 border h-full`}>
@@ -105,16 +106,25 @@ function ProjectCard({ project, isDark }) {
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               />
-            ) : (
+            ) : !videoError ? (
               <video 
                 className="w-full h-full object-cover"
                 autoPlay
                 loop
                 muted
                 playsInline
+                onError={(e) => {
+                  console.error('Video loading error:', e);
+                  setVideoError(true);
+                }}
               >
                 <source src={project.videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
               </video>
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white">
+                Video failed to load
+              </div>
             )}
           </div>
         )}
@@ -140,7 +150,6 @@ function ProjectCard({ project, isDark }) {
   );
 }
 
-// ContactCard component remains the same
 function ContactCard({ isDark }) {
   return (
     <ProjectCard
@@ -177,6 +186,7 @@ function ContactCard({ isDark }) {
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [heroVideoError, setHeroVideoError] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -198,16 +208,25 @@ function App() {
           className="absolute inset-0 z-10" 
           aria-hidden="true"
         />
-        <video 
-          className="absolute top-0 w-full h-full object-fill origin-top"
-          autoPlay
-          loop
-          muted
-          playsInline
-          onLoadedData={() => setIsVideoLoaded(true)}
-        >
-         <source src="backupSite/videos/houdiniFlip.mp4" type="video/mp4" />
-        </video>
+        {!heroVideoError ? (
+          <video 
+            className="absolute top-0 w-full h-full object-fill origin-top"
+            autoPlay
+            loop
+            muted
+            playsInline
+            onLoadedData={() => setIsVideoLoaded(true)}
+            onError={(e) => {
+              console.error('Hero video loading error:', e);
+              setHeroVideoError(true);
+            }}
+          >
+            <source src="/videos/houdiniFlip.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <div className="absolute top-0 w-full h-full bg-gray-900" />
+        )}
         <div className="relative h-full w-full px-8 z-20">
           <div className="h-full flex flex-col justify-center">
             <h1 className="text-6xl lg:text-7xl font-bold text-white mb-6 max-w-4xl">
