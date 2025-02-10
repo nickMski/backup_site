@@ -8,7 +8,7 @@ const projects = [
     "• Served as the primary project communicator, presenting the AI club project to stakeholders and team members\n\n" +
     "• Aided in key aspects of model training and web application development, leveraging skills in .NET framework and Azure cloud technologies\n\n" +
     "• Implemented API integrations and containerization using Azure, demonstrating proficiency in cloud-based software deployment",
-    videoUrl: "https://www.youtube.com/embed/7HMJWC1Sk10",
+    videoUrl: "https://www.youtube.com/embed/UxzjRXbXRTk", //https://youtu.be/UxzjRXbXRTk
     codeUrl: "https://github.com/nickMski/Liquid-Detection-Model",
     tags: ["React", "PyTorch", ".NET", "Computer Vision"]
   },
@@ -19,12 +19,23 @@ const projects = [
       "• Developed mathematical algorithms to generate complex fractal imagery using OpenGL shading techniques\n\n" +
       "• Translated advanced mathematical concepts into precise computational graphics rendering\n\n" +
       "• Utilized shader programming to create sophisticated mathematical visualization techniques",
-    videoUrl: "https://raw.githubusercontent.com/nickMski/backupSite/main/public/videos/mandelbrot.mp4",
+    videoUrl: "https://www.youtube.com/embed/AQyYwTJyVwE", //https://youtu.be/AQyYwTJyVwE
     codeUrl: "https://github.com/ChaseMcClellan/MandlebrotDemo.git",
     tags: ["C++", "OpenGL", "Shaders"]
   },
   {
     id: 3,
+    title: "Procedural Tree Generator (Solo Project)",
+    description: 
+      "• Researched and designed an advanced L-system based tree generation tool\n\n" +
+      "• Logically formulated organic, parametric tree structures using Python and VEX algorithms\n\n" +
+      "• Leveraged algorithmic growth rules and spatial constraints to produce naturalistic, dynamically branching geometries",
+    videoUrl: "https://youtube.com/embed/iFfz0iqc2LU",
+    codeUrl: "https://github.com/nickMski/Houdini-lsystem-generator",
+    tags: ["VEX", "Python", "Houdini", "Parameters"]
+  },
+  {
+    id: 4,
     title: "Post Malone Music Quiz Game (Solo Project)",
     description: 
       "• Designed and developed an interactive web-based game using Adobe Animate and JavaScript\n\n" +
@@ -33,17 +44,6 @@ const projects = [
     iframeUrl: "https://nickmski.github.io/intAniFinal/intAniPostGame.html",
     codeUrl: "https://github.com/nickMski/Post-Coast-to-Coast",
     tags: ["JavaScript", "Adobe Animate", "Animation", "Post Malone"]
-  },
-  {
-    id: 4,
-    title: "Procedural Tree Generator (Solo Project)",
-    description: 
-      "• Researched and designed an advanced L-system based tree generation tool\n\n" +
-      "• Logically formulated organic, parametric tree structures using Python and VEX algorithms\n\n" +
-      "• Leveraged algorithmic growth rules and spatial constraints to produce naturalistic, dynamically branching geometries",
-    videoUrl: "https://youtube.com/embed/867lKx8xd7U",
-    codeUrl: "https://github.com/nickMski/Houdini-lsystem-generator",
-    tags: ["VEX", "Python", "Houdini", "Parameters"]
   },
   {
     id: 5,
