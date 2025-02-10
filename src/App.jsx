@@ -8,10 +8,10 @@ const projects = [
     "• Served as the primary project communicator, presenting the AI club project to stakeholders and team members\n\n" +
     "• Aided in key aspects of model training and web application development, leveraging skills in .NET framework and Azure cloud technologies\n\n" +
     "• Implemented API integrations and containerization using Azure, demonstrating proficiency in cloud-based software deployment",
-    videoUrl: "https://www.youtube.com/embed/UxzjRXbXRTk", //https://youtu.be/UxzjRXbXRTk
+    videoUrl: "https://www.youtube.com/embed/jY9_n1toz5k", //https://youtu.be/jY9_n1toz5k
     codeUrl: "https://github.com/nickMski/Liquid-Detection-Model",
     tags: ["React", "PyTorch", ".NET", "Computer Vision"]
-  },
+  },//
   {
     id: 2,
     title: "Mandelbrot Fractal Explorer (Group Project)",
@@ -19,7 +19,7 @@ const projects = [
       "• Developed mathematical algorithms to generate complex fractal imagery using OpenGL shading techniques\n\n" +
       "• Translated advanced mathematical concepts into precise computational graphics rendering\n\n" +
       "• Utilized shader programming to create sophisticated mathematical visualization techniques",
-    videoUrl: "https://www.youtube.com/embed/AQyYwTJyVwE", //https://youtu.be/AQyYwTJyVwE
+    videoUrl: "https://www.youtube.com/embed/krVqPM9Ap-g", //https://youtu.be/krVqPM9Ap-g
     codeUrl: "https://github.com/ChaseMcClellan/MandlebrotDemo.git",
     tags: ["C++", "OpenGL", "Shaders"]
   },
@@ -30,7 +30,7 @@ const projects = [
       "• Researched and designed an advanced L-system based tree generation tool\n\n" +
       "• Logically formulated organic, parametric tree structures using Python and VEX algorithms\n\n" +
       "• Leveraged algorithmic growth rules and spatial constraints to produce naturalistic, dynamically branching geometries",
-    videoUrl: "https://youtube.com/embed/iFfz0iqc2LU",
+    videoUrl: "https://youtube.com/embed/dkBasHDk7wQ", //https://youtu.be/dkBasHDk7wQ
     codeUrl: "https://github.com/nickMski/Houdini-lsystem-generator",
     tags: ["VEX", "Python", "Houdini", "Parameters"]
   },
@@ -41,7 +41,7 @@ const projects = [
       "• Designed and developed an interactive web-based game using Adobe Animate and JavaScript\n\n" +
       "• Created an engaging gameplay mechanic centered on testing players' knowledge of Post Malone's song lyrics\n\n" +
       "• Utilized JavaScript to develop dynamic game interactions and scoring mechanisms",
-    iframeUrl: "https://nickmski.github.io/intAniFinal/intAniPostGame.html",
+    iframeUrl: "https://nickmski.github.io/newPub/newPub.html",
     codeUrl: "https://github.com/nickMski/Post-Coast-to-Coast",
     tags: ["JavaScript", "Adobe Animate", "Animation", "Post Malone"]
   },
