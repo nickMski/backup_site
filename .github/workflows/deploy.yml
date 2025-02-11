@@ -1,21 +1,44 @@
-name: Deploy                    # Name of the workflow
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main']         # Triggers when you push to main branch
+    branches: ['main'] # or 'master' if that's your default branch
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest     # Uses Ubuntu to run the deployment
-
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4         # Gets your code from GitHub
-      - uses: actions/setup-node@v3       # Sets up Node.js
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Set up Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 18                # Uses Node.js version 18
-      - run: npm ci                       # Installs dependencies
-      - run: npm run build               # Builds your project
-      - uses: peaceiris/actions-gh-pages@v3    # Deploys to GitHub Pages
+          node-version: 18
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}   # Uses GitHub's automatic token
-          publish_dir: ./dist            # Publishes the dist folder Vite creates
+          path: './dist'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
