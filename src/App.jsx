@@ -25,13 +25,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "Procedural Tree Generator (Solo Project)",
+    title: "Parametric Tree Generator (Solo Project)",
     description: 
-      "• Researched and designed an advanced L-system based tree generation tool\n\n" +
-      "• Logically formulated organic, parametric tree structures using Python and VEX algorithms\n\n" +
-      "• Leveraged algorithmic growth rules and spatial constraints to produce naturalistic, dynamically branching geometries",
+      "• Developed a procedural tree generation system with parametric controls for trunk and branch characteristics\n\n" +
+      "• Implemented natural tree growth patterns using VEX, featuring smooth trunk tapering and organic branch distribution\n\n" +
+      "• Created dynamic branch generation with quaternion-based twisting and customizable drooping effects to achieve realistic tree forms",
     videoUrl: "https://youtube.com/embed/dkBasHDk7wQ", //https://youtu.be/dkBasHDk7wQ
-    codeUrl: "https://github.com/nickMski/Houdini-lsystem-generator",
+    codeUrl: "https://github.com/nickMski/parametric-tree-generator-houdini",//https://github.com/nickMski/parametric-tree-generator-houdini
     tags: ["VEX", "Python", "Houdini", "Parameters"]
   },
   {
@@ -41,7 +41,7 @@ const projects = [
       "• Designed and developed an interactive web-based game using Adobe Animate and JavaScript\n\n" +
       "• Created an engaging gameplay mechanic centered on testing players' knowledge of Post Malone's song lyrics\n\n" +
       "• Utilized JavaScript to develop dynamic game interactions and scoring mechanisms",
-    iframeUrl: "https://nickmski.github.io/newPub/newPub.html",
+    iframeUrl: "https://nickmski.github.io/postMaloneGame/soundBalancedPostGame.html",
     codeUrl: "https://github.com/nickMski/Post-Coast-to-Coast",
     tags: ["JavaScript", "Adobe Animate", "Animation", "Post Malone"]
   },
